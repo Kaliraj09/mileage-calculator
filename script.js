@@ -34,6 +34,10 @@ const vehicleDb = {
         { name: "Mahindra Scorpio-N", std: 14.0 },
         { name: "Toyota Innova Hycross", std: 23.2 },
         { name: "Maruti Brezza", std: 19.8 },
+         { name: "Hyundai i20 Petrol (Manual)", std: 20.3 },
+        { name: "Hyundai i20 Petrol (IVT)", std: 19.6 },
+        { name: "Hyundai i20 N Line", std: 18.1 },
+        { name: "Hyundai i20 Diesel (Older Model)", std: 25.2 },
         { name: "Tata Punch", std: 18.9 }
     ],
     "Lorry": [
