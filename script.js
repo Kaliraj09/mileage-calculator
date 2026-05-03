@@ -17,6 +17,7 @@ const vehicleDb = {
         { name: "Honda Dio", std: 48.0 }
     ],
     "Bike": [
+            // --- EXISTING MODELS (Kept) ---
         { name: "Hero Splendor Plus", std: 65.0 },
         { name: "Honda Shine", std: 55.0 },
         { name: "Bajaj Pulsar 150", std: 45.0 },
@@ -24,7 +25,44 @@ const vehicleDb = {
         { name: "Honda SP 125", std: 60.0 },
         { name: "TVS Apache RTR 160", std: 45.0 },
         { name: "Yamaha R15 V4", std: 40.0 },
-        { name: "KTM Duke 200", std: 30.0 }
+        { name: "KTM Duke 200", std: 30.0 },
+
+        // --- NEW PULSAR MODELS ---
+        { name: "Bajaj Pulsar 125", std: 51.5 },
+        { name: "Bajaj Pulsar NS 125", std: 64.7 },
+        { name: "Bajaj Pulsar N160", std: 59.1 },
+        { name: "Bajaj Pulsar NS160", std: 40.4 },
+        { name: "Bajaj Pulsar NS200", std: 40.3 },
+        { name: "Bajaj Pulsar RS200", std: 35.0 },
+        { name: "Bajaj Pulsar 220F", std: 40.0 },
+        { name: "Bajaj Pulsar N250", std: 39.0 },
+        { name: "Bajaj Pulsar NS400Z", std: 35.0 },
+
+        // --- NEW HONDA MODELS ---
+        { name: "Honda Shine 100", std: 65.0 },
+        { name: "Honda Livo", std: 70.0 },
+        { name: "Honda CD 110 Dream", std: 65.0 },
+        { name: "Honda Unicorn", std: 50.0 },
+        { name: "Honda SP 160", std: 50.0 },
+        { name: "Honda Hornet 2.0", std: 57.3 },
+        { name: "Honda CB300F", std: 30.0 },
+        { name: "Honda CB350 H'ness", std: 45.8 },
+
+        // --- NEW HERO / HERO HONDA MODELS ---
+        { name: "Hero Splendor Plus XTEC", std: 83.2 },
+        { name: "Hero Super Splendor", std: 68.0 },
+        { name: "Hero HF Deluxe", std: 70.0 },
+        { name: "Hero HF 100", std: 70.0 },
+        { name: "Hero Passion Plus", std: 70.0 },
+        { name: "Hero Passion XTEC", std: 60.0 },
+        { name: "Hero Glamour XTEC", std: 60.0 },
+        { name: "Hero Xtreme 125R", std: 66.0 },
+        { name: "Hero Xtreme 160R", std: 49.6 },
+        { name: "Hero Xpulse 200 4V", std: 32.9 },
+        { name: "Hero Karizma XMR", std: 35.0 },
+        { name: "Hero Honda Hunk (Old)", std: 45.0 },
+        { name: "Hero Honda CBZ Xtreme (Old)", std: 45.0 },
+        { name: "Hero Honda Karizma R/ZMR", std: 30.0 }
     ],
     "Car": [
         { name: "Maruti Swift", std: 22.5 },
