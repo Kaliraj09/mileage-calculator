@@ -7,42 +7,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator-card">
-        <h1 class="main-heading">Mileage Calculator By Kali</h1>
-        
-        <div class="form-container">
-            <div class="input-group">
-                <label>Km Travelled</label>
-                <input type="number" id="distance" placeholder="e.g. 500">
+    <div class="container">
+        <header>
+            <h1>Mileage Calculator By Kali</h1>
+            <p>Compare your real-world performance against company standards.</p>
+        </header>
+
+        <main class="calculator-card">
+            <div class="form-grid">
+                <div class="input-group full-width">
+                    <label>Step 1: Select Category</label>
+                    <select id="vehicleType" onchange="loadModels()">
+                        <option value="">-- Select Type --</option>
+                        <option value="Scooty">Scooty</option>
+                        <option value="Bike">Bike</option>
+                        <option value="Car">Car</option>
+                        <option value="Lorry">Lorry / Truck</option>
+                        <option value="Bus">Bus</option>
+                    </select>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Step 2: Search Model</label>
+                    <input type="text" id="modelSearch" placeholder="Type to search (e.g. Scooty Pep, Swift...)" onkeyup="filterModels()">
+                    <div id="searchDropdown" class="search-results hidden"></div>
+                </div>
+
+                <div class="input-group">
+                    <label>Distance (KM)</label>
+                    <input type="number" id="distance" placeholder="0.00">
+                </div>
+
+                <div class="input-group">
+                    <label>Fuel (Litres)</label>
+                    <input type="number" id="fuel" placeholder="0.00">
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Total Cost (₹)</label>
+                    <input type="number" id="cost" placeholder="0.00">
+                </div>
             </div>
 
-            <div class="input-group">
-                <label>Type of Fuel</label>
-                <select id="fuelType">
-                    <option value="Petrol">Petrol</option>
-                    <option value="Diesel">Diesel</option>
-                </select>
+            <button class="calc-btn" onclick="calculateResult()">Generate Performance Report</button>
+        </main>
+
+        <section id="resultCard" class="result-card hidden">
+            <div class="res-header">
+                <span id="vehicleNameDisplay">Vehicle Name</span>
+                <div id="statusBadge" class="badge">Checking...</div>
+            </div>
+            
+            <div class="res-stats">
+                <div class="stat-box">
+                    <small>Your Mileage</small>
+                    <p id="myMileage">0.0</p>
+                    <span>km/L</span>
+                </div>
+                <div class="stat-box">
+                    <small>Company Std</small>
+                    <p id="stdMileage">0.0</p>
+                    <span>km/L</span>
+                </div>
+                <div class="stat-box">
+                    <small>Cost/KM</small>
+                    <p id="costPerKm">₹0.0</p>
+                    <span>per km</span>
+                </div>
             </div>
 
-            <div class="input-group">
-                <label>Fuel Filled (Litres)</label>
-                <input type="number" id="fuelQuantity" placeholder="e.g. 20">
-            </div>
-
-            <div class="input-group">
-                <label>Total Amount Spent</label>
-                <input type="number" id="totalAmount" placeholder="e.g. 2000">
-            </div>
-
-            <button onclick="calculateKali()">Calculate Results</button>
-        </div>
-
-        <div id="results" class="results-area hidden">
-            <div class="res-item"><strong>Fuel Cost per kilometer:</strong> <span id="costPerKm">0</span></div>
-            <div class="res-item"><strong>Mileage per Litre:</strong> <span id="mileage">0</span></div>
-            <div class="res-item"><strong>Fuel:</strong> <span id="dispFuel">Petrol</span></div>
-            <div class="res-item"><strong>Distance:</strong> <span id="dispDist">0</span> km</div>
-        </div>
+            <div id="feedbackMessage" class="feedback-text"></div>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>
